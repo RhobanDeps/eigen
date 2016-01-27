@@ -1,0 +1,4 @@
+{
+    "name": "rhobandeps/eigen",
+    "includes": "Eigen"
+}
