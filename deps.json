@@ -1,4 +1,4 @@
 {
     "name": "rhobandeps/eigen",
-    "includes": [".", "Eigen"]
+    "includes": "."
 }
