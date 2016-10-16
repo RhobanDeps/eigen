@@ -2,6 +2,13 @@ project(Eigen)
 
 cmake_minimum_required(VERSION 2.8.2)
 
+## Find catkin macros and lib
+find_package(catkin REQUIRED)
+
+catkin_package(
+  INCLUDE_DIRS .
+)
+
 # guard against in-source builds
 
 if(${CMAKE_SOURCE_DIR} STREQUAL ${CMAKE_BINARY_DIR})
