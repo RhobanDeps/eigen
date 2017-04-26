@@ -1,6 +1,6 @@
-project(Eigen)
+project(Eigen3)
 
-cmake_minimum_required(VERSION 2.8.2)
+cmake_minimum_required(VERSION 2.8.5)
 
 ## Find catkin macros and lib
 find_package(catkin REQUIRED)

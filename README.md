@@ -1,5 +1,3 @@
-# eigen
-Eigen linear algebra library forked from http://eigen.tuxfamily.org/
+**Eigen is a C++ template library for linear algebra: matrices, vectors, numerical solvers, and related algorithms.**
 
-Version 3.2.7 (released on November 5, 2015)
-
+For more information go to http://eigen.tuxfamily.org/.
