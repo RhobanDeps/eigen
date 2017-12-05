@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <package>
-  <name>Eigen</name>
+  <name>eigen</name>
   <version>0.0.0</version>
   <description>A fixed version of Eigen with catkin capabilities</description>
 
