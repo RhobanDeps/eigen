@@ -335,7 +335,7 @@ template<typename Derived> class MatrixBase
 
     inline const PartialPivLU<PlainObject> lu() const;
 
-    inline const Inverse<Derived> inverse() const;
+    const Inverse<Derived> inverse() const;
 
     template<typename ResultType>
     inline void computeInverseAndDetWithCheck(
