@@ -2,10 +2,9 @@
 <package>
   <name>eigen</name>
   <version>0.0.0</version>
-  <description>A fixed version of Eigen with catkin capabilities</description>
+  <description>A simple catkin package used to provide catkin interface to the eigen system library. Is simply there to maintain compatibility with Rhoban architecture.</description>
 
-  <maintainer email="qrouxel@labri.fr">Quentin Rouxel</maintainer>
-  <author email="missing@missing.com">TODO</author>
+  <maintainer email="lhofer@labri.fr">Ludovic Hofer</maintainer>
 
   <license>MPL2</license>
 
