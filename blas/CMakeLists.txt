@@ -1,15 +1,13 @@
 
 project(EigenBlas CXX)
 
-include("../cmake/language_support.cmake")
-
-workaround_9220(Fortran EIGEN_Fortran_COMPILER_WORKS)
-
-if(EIGEN_Fortran_COMPILER_WORKS)
-  enable_language(Fortran OPTIONAL)
-  if(NOT CMAKE_Fortran_COMPILER)
-    set(EIGEN_Fortran_COMPILER_WORKS OFF)
-  endif()
+include(CheckLanguage)
+check_language(Fortran)
+if(CMAKE_Fortran_COMPILER)
+  enable_language(Fortran)
+  set(EIGEN_Fortran_COMPILER_WORKS ON)
+else()
+  set(EIGEN_Fortran_COMPILER_WORKS OFF)
 endif()
 
 add_custom_target(blas)
@@ -45,10 +43,12 @@ install(TARGETS eigen_blas eigen_blas_static
 
 if(EIGEN_Fortran_COMPILER_WORKS)
 
-if(EIGEN_LEAVE_TEST_IN_ALL_TARGET)
-  add_subdirectory(testing) # can't do EXCLUDE_FROM_ALL here, breaks CTest
-else()
-  add_subdirectory(testing EXCLUDE_FROM_ALL)
+if(BUILD_TESTING)
+  if(EIGEN_LEAVE_TEST_IN_ALL_TARGET)
+    add_subdirectory(testing) # can't do EXCLUDE_FROM_ALL here, breaks CTest
+  else()
+    add_subdirectory(testing EXCLUDE_FROM_ALL)
+  endif()
 endif()
 
 endif()
